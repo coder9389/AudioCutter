@@ -1,10 +1,9 @@
-// pages/_app.tsx
-import { AppProps } from 'next/app';
 import { MantineProvider } from '@mantine/core';
+import { AppProps } from 'next/app';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <MantineProvider theme={{ globalStyles: true, normalizeCSS: true }}>
       <Component {...pageProps} />
     </MantineProvider>
   );
